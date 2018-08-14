@@ -248,3 +248,64 @@ The push refers to repository [docker.io/weibeld/tg-monitor]
 3950338e1e6a: Layer already exists
 7eee64d0740b: Pushed
 cli-0.0.1: digest: sha256:1c5a19f1e36c69fb2cbde62ff696d18aa244936d0386043c96fa14a6ae80b9fe size: 950
+
+BUILD 1534226871 (Tue Aug 14 14:07:51 HKT 2018)
+
+> Running "installDist" in tgm-main-cli...
+:clean
+
+BUILD SUCCESSFUL in 1s
+1 actionable task: 1 executed
+:compileJava
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-ui/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-corefacade/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-cli/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-api/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-monitor/master-SNAPSHOT/maven-metadata.xml
+:processResources
+:classes
+:jar
+:startScripts
+:installDist
+
+BUILD SUCCESSFUL in 13s
+5 actionable tasks: 5 executed
+
+> Components in tgm-main-cli:
+tgm-cli              master-SNAPSHOT
+tgm-corefacade       master-SNAPSHOT
+tgm-entities         0.0.2
+tgm-ipc-api          master-SNAPSHOT
+tgm-ipc-ui           master-SNAPSHOT
+tgm-logincodeprompt  0.0.1
+tgm-main-cli         0.0.1
+tgm-monitor          master-SNAPSHOT
+tgm-servicelocator   0.0.1
+
+> Copying tgm-main-cli/build/install/tgm-main-cli to bundle-cli...
+
+> Building Docker image weibeld/tg-monitor:cli-0.0.1 in bundle-cli...
+Sending build context to Docker daemon  1.798MB
+Step 1/4 : FROM weibeld/tg-monitor:base
+ ---> e0c521fc96cf
+Step 2/4 : WORKDIR /root
+ ---> Using cache
+ ---> 59ea23e5a315
+Step 3/4 : COPY tgm-main-cli .
+ ---> 3e682111bba0
+Step 4/4 : CMD ./bin/tgm-main-cli
+ ---> Running in a59cc52018ce
+Removing intermediate container a59cc52018ce
+ ---> 0dff2cf43e00
+Successfully built 0dff2cf43e00
+Successfully tagged weibeld/tg-monitor:cli-0.0.1
+
+> Pushing Docker image weibeld/tg-monitor:cli-0.0.1 to Docker Hub...
+The push refers to repository [docker.io/weibeld/tg-monitor]
+9c63750a67fa: Preparing
+3950338e1e6a: Preparing
+73046094a9b8: Preparing
+3950338e1e6a: Layer already exists
+73046094a9b8: Layer already exists
+9c63750a67fa: Pushed
+cli-0.0.1: digest: sha256:559aaf1f31ac52e0247fd0231cd527e402d9e7ba652c4a2ee70915799a1eb7d5 size: 950
