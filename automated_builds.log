@@ -187,3 +187,64 @@ e5ca896c8621: Preparing
 3950338e1e6a: Layer already exists
 e5ca896c8621: Pushed
 cli-0.0.1: digest: sha256:5157733a2e54719aa85673c2d806d8a316affb4b884fa15cb6b1adc37906eeac size: 950
+
+BUILD 1534226287 (Tue Aug 14 13:58:07 HKT 2018)
+
+> Running "installDist" in tgm-main-cli...
+:clean
+
+BUILD SUCCESSFUL in 1s
+1 actionable task: 1 executed
+:compileJava
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-ui/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-corefacade/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-cli/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-api/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-monitor/master-SNAPSHOT/maven-metadata.xml
+:processResources
+:classes
+:jar
+:startScripts
+:installDist
+
+BUILD SUCCESSFUL in 16s
+5 actionable tasks: 5 executed
+
+> Components in tgm-main-cli:
+tgm-cli              master-SNAPSHOT
+tgm-corefacade       master-SNAPSHOT
+tgm-entities         0.0.2
+tgm-ipc-api          master-SNAPSHOT
+tgm-ipc-ui           master-SNAPSHOT
+tgm-logincodeprompt  0.0.1
+tgm-main-cli         0.0.1
+tgm-monitor          master-SNAPSHOT
+tgm-servicelocator   0.0.1
+
+> Copying tgm-main-cli/build/install/tgm-main-cli to bundle-cli...
+
+> Building Docker image weibeld/tg-monitor:cli-0.0.1 in bundle-cli...
+Sending build context to Docker daemon  1.785MB
+Step 1/4 : FROM weibeld/tg-monitor:base
+ ---> e0c521fc96cf
+Step 2/4 : WORKDIR /root
+ ---> Using cache
+ ---> 59ea23e5a315
+Step 3/4 : COPY tgm-main-cli .
+ ---> a86cbcfb1f3b
+Step 4/4 : CMD ./bin/tgm-main-cli
+ ---> Running in 9ece43e78963
+Removing intermediate container 9ece43e78963
+ ---> 6bbfbe7b1431
+Successfully built 6bbfbe7b1431
+Successfully tagged weibeld/tg-monitor:cli-0.0.1
+
+> Pushing Docker image weibeld/tg-monitor:cli-0.0.1 to Docker Hub...
+The push refers to repository [docker.io/weibeld/tg-monitor]
+7eee64d0740b: Preparing
+3950338e1e6a: Preparing
+73046094a9b8: Preparing
+73046094a9b8: Layer already exists
+3950338e1e6a: Layer already exists
+7eee64d0740b: Pushed
+cli-0.0.1: digest: sha256:1c5a19f1e36c69fb2cbde62ff696d18aa244936d0386043c96fa14a6ae80b9fe size: 950
