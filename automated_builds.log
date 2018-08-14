@@ -560,3 +560,110 @@ The push refers to repository [docker.io/weibeld/tg-monitor]
 73046094a9b8: Layer already exists
 5f4d3f4bc076: Pushed
 cli-0.0.1: digest: sha256:15cf78ad4b37a39153210c1019595b9f8d181fe38b734d48b3c35a7b9a3a3d79 size: 950
+
+BUILD 1534237002 (Tue Aug 14 16:56:42 HKT 2018)
+
+> Running "installDist" in tgm-main-cli...
+:clean
+
+BUILD SUCCESSFUL in 1s
+1 actionable task: 1 executed
+:compileJava
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-ui/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-corefacade/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-cli/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-api/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-monitor/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-cli/master-SNAPSHOT/tgm-cli-master-0.0.5-ga67f448-13.jar
+:processResources
+:classes
+:jar
+:startScripts
+:installDist
+
+BUILD SUCCESSFUL in 31s
+5 actionable tasks: 5 executed
+
+> Components in tgm-main-cli:
+tgm-cli              master-SNAPSHOT
+tgm-corefacade       master-SNAPSHOT
+tgm-entities         0.0.2
+tgm-ipc-api          master-SNAPSHOT
+tgm-ipc-ui           master-SNAPSHOT
+tgm-logincodeprompt  0.0.1
+tgm-main-cli         0.0.1
+tgm-monitor          master-SNAPSHOT
+tgm-servicelocator   0.0.1
+
+> Copying tgm-main-cli/build/install/tgm-main-cli to bundle-cli...
+
+> Building Docker image weibeld/tg-monitor:cli-0.0.1 in bundle-cli...
+Sending build context to Docker daemon  1.926MB
+Step 1/4 : FROM weibeld/tg-monitor:base
+Get https://registry-1.docker.io/v2/weibeld/tg-monitor/manifests/base: Service Unavailable
+
+BUILD 1534237207 (Tue Aug 14 17:00:07 HKT 2018)
+
+> Running "installDist" in tgm-main-cli...
+:clean
+
+BUILD SUCCESSFUL in 1s
+1 actionable task: 1 executed
+:compileJava
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-ui/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-corefacade/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-cli/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-api/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-monitor/master-SNAPSHOT/maven-metadata.xml
+:processResources
+:classes
+:jar
+:startScripts
+:installDist
+
+BUILD SUCCESSFUL in 12s
+5 actionable tasks: 5 executed
+
+> Components in tgm-main-cli:
+tgm-cli              master-SNAPSHOT
+tgm-corefacade       master-SNAPSHOT
+tgm-entities         0.0.2
+tgm-ipc-api          master-SNAPSHOT
+tgm-ipc-ui           master-SNAPSHOT
+tgm-logincodeprompt  0.0.1
+tgm-main-cli         0.0.1
+tgm-monitor          master-SNAPSHOT
+tgm-servicelocator   0.0.1
+
+> Copying tgm-main-cli/build/install/tgm-main-cli to bundle-cli...
+
+> Building Docker image weibeld/tg-monitor:cli-0.0.1 in bundle-cli...
+Sending build context to Docker daemon  1.927MB
+Step 1/4 : FROM weibeld/tg-monitor:base
+base: Pulling from weibeld/tg-monitor
+8e3ba11ec2a2: Already exists
+cf6db8ae1697: Already exists
+Digest: sha256:0dfd281a147c1eb9c7e5cb7eca399013e0eaf741aee25fb1fdabde563977adf3
+Status: Downloaded newer image for weibeld/tg-monitor:base
+ ---> e0c521fc96cf
+Step 2/4 : WORKDIR /root
+Removing intermediate container 8c88690baba3
+ ---> 7c103313f890
+Step 3/4 : COPY tgm-main-cli .
+ ---> 9285a8b1b10c
+Step 4/4 : CMD ./bin/tgm-main-cli
+ ---> Running in c219644aef75
+Removing intermediate container c219644aef75
+ ---> 5462664f3ed5
+Successfully built 5462664f3ed5
+Successfully tagged weibeld/tg-monitor:cli-0.0.1
+
+> Pushing Docker image weibeld/tg-monitor:cli-0.0.1 to Docker Hub...
+The push refers to repository [docker.io/weibeld/tg-monitor]
+5c7993aac0a3: Preparing
+3950338e1e6a: Preparing
+73046094a9b8: Preparing
+73046094a9b8: Layer already exists
+3950338e1e6a: Layer already exists
+5c7993aac0a3: Pushed
+cli-0.0.1: digest: sha256:34195e3f76900088fb09195e873369bc4b4550fd6d30b4a2ec2b65781bacc3cf size: 950
