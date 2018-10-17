@@ -793,3 +793,212 @@ The push refers to repository [docker.io/weibeld/tg-monitor]
 4080ce5f9c82: Pushed
 73046094a9b8: Pushed
 cli-0.0.1: digest: sha256:34b77bcf86490140de4f93f6ec5aec2a150e17434880f169defe61ee72c0717c size: 950
+
+BUILD 1539804022 (Wed Oct 17 21:20:22 CEST 2018)
+
+> Running "installDist" in /Users/dw/Desktop/tg-monitor/tgm-main-cli...
+Starting a Gradle Daemon (subsequent builds will be faster)
+
+FAILURE: Build failed with an exception.
+
+* Where:
+Build file '/Users/dw/Desktop/tg-monitor/tgm-main-cli/build.gradle' line: 57
+
+* What went wrong:
+A problem occurred evaluating root project 'tgm-main-cli'.
+> secrets.properties (No such file or directory)
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 7s
+
+BUILD 1539804162 (Wed Oct 17 21:22:42 CEST 2018)
+
+> Running "installDist" in /Users/dw/Desktop/tg-monitor/tgm-main-cli...
+No secrets.properties file
+:clean
+
+BUILD SUCCESSFUL in 1s
+1 actionable task: 1 executed
+No secrets.properties file
+:compileJava
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-ui/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-corefacade/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-cli/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-api/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-monitor/master-SNAPSHOT/maven-metadata.xml
+:processResources
+:classes
+:jar
+:startScripts
+:installDist
+
+BUILD SUCCESSFUL in 9s
+5 actionable tasks: 5 executed
+
+> Components in tgm-main-cli:
+tgm-cli              master-SNAPSHOT
+tgm-corefacade       master-SNAPSHOT
+tgm-entities         0.0.2
+tgm-ipc-api          master-SNAPSHOT
+tgm-ipc-ui           master-SNAPSHOT
+tgm-logincodeprompt  0.0.1
+tgm-main-cli         0.0.1
+tgm-monitor          master-SNAPSHOT
+tgm-servicelocator   0.0.1
+
+> Copying /Users/dw/Desktop/tg-monitor/tgm-main-cli/build/install/tgm-main-cli to /Users/dw/Desktop/tg-monitor/bundle-cli...
+
+> Building Docker image cli-0.0.1 in /Users/dw/Desktop/tg-monitor/bundle-cli...
+Sending build context to Docker daemon  2.245MB
+Step 1/4 : FROM weibeld/tg-monitor:base
+base: Pulling from weibeld/tg-monitor
+8e3ba11ec2a2: Already exists
+cf6db8ae1697: Already exists
+Digest: sha256:0dfd281a147c1eb9c7e5cb7eca399013e0eaf741aee25fb1fdabde563977adf3
+Status: Downloaded newer image for weibeld/tg-monitor:base
+ ---> e0c521fc96cf
+Step 2/4 : WORKDIR /root
+Removing intermediate container 01d303ae8fd0
+ ---> aa18ecd41326
+Step 3/4 : COPY tgm-main-cli .
+ ---> 147a5171206e
+Step 4/4 : CMD ./bin/tgm-main-cli
+ ---> Running in 2b6bb05f8ae7
+Removing intermediate container 2b6bb05f8ae7
+ ---> 7fe33dee42c6
+Successfully built 7fe33dee42c6
+Successfully tagged cli-0.0.1:latest
+
+> Pushing Docker image cli-0.0.1 to Docker Hub...
+The push refers to repository [docker.io/library/cli-0.0.1]
+bffe8a9da0c4: Preparing
+3950338e1e6a: Preparing
+73046094a9b8: Preparing
+denied: requested access to the resource is denied
+
+BUILD 1539804209 (Wed Oct 17 21:23:29 CEST 2018)
+
+> Running "installDist" in /Users/dw/Desktop/tg-monitor/tgm-main-cli...
+No secrets.properties file
+:clean
+
+BUILD SUCCESSFUL in 1s
+1 actionable task: 1 executed
+No secrets.properties file
+:compileJava
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-ui/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-corefacade/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-cli/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-api/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-monitor/master-SNAPSHOT/maven-metadata.xml
+:processResources
+:classes
+:jar
+:startScripts
+:installDist
+
+BUILD SUCCESSFUL in 7s
+5 actionable tasks: 5 executed
+
+> Components in tgm-main-cli:
+tgm-cli              master-SNAPSHOT
+tgm-corefacade       master-SNAPSHOT
+tgm-entities         0.0.2
+tgm-ipc-api          master-SNAPSHOT
+tgm-ipc-ui           master-SNAPSHOT
+tgm-logincodeprompt  0.0.1
+tgm-main-cli         0.0.1
+tgm-monitor          master-SNAPSHOT
+tgm-servicelocator   0.0.1
+
+> Copying /Users/dw/Desktop/tg-monitor/tgm-main-cli/build/install/tgm-main-cli to /Users/dw/Desktop/tg-monitor/bundle-cli...
+
+> Building Docker image cli-0.0.1 in /Users/dw/Desktop/tg-monitor/bundle-cli...
+Sending build context to Docker daemon  2.248MB
+Step 1/4 : FROM weibeld/tg-monitor:base
+ ---> e0c521fc96cf
+Step 2/4 : WORKDIR /root
+ ---> Using cache
+ ---> aa18ecd41326
+Step 3/4 : COPY tgm-main-cli .
+ ---> 5d3b29c8f5d5
+Step 4/4 : CMD ./bin/tgm-main-cli
+ ---> Running in 573571e49ecd
+Removing intermediate container 573571e49ecd
+ ---> 04c505891ad1
+Successfully built 04c505891ad1
+Successfully tagged cli-0.0.1:latest
+
+> Pushing Docker image cli-0.0.1 to Docker Hub...
+The push refers to repository [docker.io/library/cli-0.0.1]
+42e965a75cc4: Preparing
+3950338e1e6a: Preparing
+73046094a9b8: Preparing
+denied: requested access to the resource is denied
+
+BUILD 1539804253 (Wed Oct 17 21:24:13 CEST 2018)
+
+> Running "installDist" in /Users/dw/Desktop/tg-monitor/tgm-main-cli...
+No secrets.properties file
+:clean
+
+BUILD SUCCESSFUL in 0s
+1 actionable task: 1 executed
+No secrets.properties file
+:compileJava
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-ui/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-corefacade/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-cli/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-api/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-monitor/master-SNAPSHOT/maven-metadata.xml
+:processResources
+:classes
+:jar
+:startScripts
+:installDist
+
+BUILD SUCCESSFUL in 9s
+5 actionable tasks: 5 executed
+
+> Components in tgm-main-cli:
+tgm-cli              master-SNAPSHOT
+tgm-corefacade       master-SNAPSHOT
+tgm-entities         0.0.2
+tgm-ipc-api          master-SNAPSHOT
+tgm-ipc-ui           master-SNAPSHOT
+tgm-logincodeprompt  0.0.1
+tgm-main-cli         0.0.1
+tgm-monitor          master-SNAPSHOT
+tgm-servicelocator   0.0.1
+
+> Copying /Users/dw/Desktop/tg-monitor/tgm-main-cli/build/install/tgm-main-cli to /Users/dw/Desktop/tg-monitor/bundle-cli...
+
+> Building Docker image weibeld/tg-monitor:cli-0.0.1 in /Users/dw/Desktop/tg-monitor/bundle-cli...
+Sending build context to Docker daemon   2.25MB
+Step 1/4 : FROM weibeld/tg-monitor:base
+ ---> e0c521fc96cf
+Step 2/4 : WORKDIR /root
+ ---> Using cache
+ ---> aa18ecd41326
+Step 3/4 : COPY tgm-main-cli .
+ ---> 404ac358997f
+Step 4/4 : CMD ./bin/tgm-main-cli
+ ---> Running in 637367dfdfe8
+Removing intermediate container 637367dfdfe8
+ ---> 6974236403a6
+Successfully built 6974236403a6
+Successfully tagged weibeld/tg-monitor:cli-0.0.1
+
+> Pushing Docker image weibeld/tg-monitor:cli-0.0.1 to Docker Hub...
+The push refers to repository [docker.io/weibeld/tg-monitor]
+2af6a9da1204: Preparing
+3950338e1e6a: Preparing
+73046094a9b8: Preparing
+2af6a9da1204: Pushed
+73046094a9b8: Pushed
+3950338e1e6a: Pushed
+cli-0.0.1: digest: sha256:3f2aee73ca451416f0a76146238e493cb00cea2d131356ebaf0af9132565d345 size: 950
