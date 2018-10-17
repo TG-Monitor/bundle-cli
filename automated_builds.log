@@ -1002,3 +1002,66 @@ The push refers to repository [docker.io/weibeld/tg-monitor]
 73046094a9b8: Pushed
 3950338e1e6a: Pushed
 cli-0.0.1: digest: sha256:3f2aee73ca451416f0a76146238e493cb00cea2d131356ebaf0af9132565d345 size: 950
+
+BUILD 1539805197 (Wed Oct 17 21:39:57 CEST 2018)
+
+> Running "installDist" in /Users/dw/Desktop/tg-monitor/tgm-main-cli...
+No secrets.properties file
+:clean
+
+BUILD SUCCESSFUL in 1s
+1 actionable task: 1 executed
+No secrets.properties file
+:compileJava
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-ui/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-corefacade/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-cli/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-ipc-api/master-SNAPSHOT/maven-metadata.xml
+Download https://jitpack.io/com/github/tg-monitor/tgm-monitor/master-SNAPSHOT/maven-metadata.xml
+:processResources
+:classes
+:jar
+:startScripts
+:installDist
+
+BUILD SUCCESSFUL in 13s
+5 actionable tasks: 5 executed
+
+> Components in tgm-main-cli:
+tgm-cli              master-SNAPSHOT
+tgm-corefacade       master-SNAPSHOT
+tgm-entities         0.0.2
+tgm-ipc-api          master-SNAPSHOT
+tgm-ipc-ui           master-SNAPSHOT
+tgm-logincodeprompt  0.0.1
+tgm-main-cli         0.0.1
+tgm-monitor          master-SNAPSHOT
+tgm-servicelocator   0.0.1
+
+> Copying /Users/dw/Desktop/tg-monitor/tgm-main-cli/build/install/tgm-main-cli to /Users/dw/Desktop/tg-monitor/bundle-cli...
+
+> Building Docker image weibeld/tg-monitor:cli-0.0.1 in /Users/dw/Desktop/tg-monitor/bundle-cli...
+Sending build context to Docker daemon  2.291MB
+Step 1/4 : FROM weibeld/tg-monitor:base
+ ---> e0c521fc96cf
+Step 2/4 : WORKDIR /root
+ ---> Using cache
+ ---> aa18ecd41326
+Step 3/4 : COPY tgm-main-cli .
+ ---> 5bac7ff0f3cd
+Step 4/4 : CMD ./bin/tgm-main-cli
+ ---> Running in 23188beb6096
+Removing intermediate container 23188beb6096
+ ---> 134ccdfeede9
+Successfully built 134ccdfeede9
+Successfully tagged weibeld/tg-monitor:cli-0.0.1
+
+> Pushing Docker image weibeld/tg-monitor:cli-0.0.1 to Docker Hub...
+The push refers to repository [docker.io/weibeld/tg-monitor]
+54e3bb992a3f: Preparing
+3950338e1e6a: Preparing
+73046094a9b8: Preparing
+73046094a9b8: Layer already exists
+3950338e1e6a: Layer already exists
+54e3bb992a3f: Pushed
+cli-0.0.1: digest: sha256:ba327b45b182231162fbeb569a2fb8e619e7d7667e6b59509ee463fe0c27ed90 size: 950
